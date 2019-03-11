@@ -5,7 +5,6 @@ ruby '2.5.0'
 
 
 # modal dependencies
-gem 'popper_js', '~> 1.14.5'
 
 # bootstrap, modal
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'

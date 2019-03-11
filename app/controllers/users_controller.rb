@@ -23,6 +23,18 @@ class UsersController < ApplicationController
     
   end
 
+  # GET 
+  def new_user_type
+    @user_type = UserType.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+  end
+
+
   # GET /users/1/edit
   def edit
   end
@@ -75,6 +87,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:full_name)
+      params.require(:user).permit(:full_name, :user_type_id)
     end
 end
