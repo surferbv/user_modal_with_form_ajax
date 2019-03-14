@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :full_name %>
     <%= f.association :user_type, label_method: :type_of %>
-    <%= link_to 'New User Type (modal)', new_user_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+    <%= link_to 'New User Type (modal)', new_user_type_modal_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
 
   </div>
 

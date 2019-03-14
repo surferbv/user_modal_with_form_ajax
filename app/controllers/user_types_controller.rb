@@ -28,8 +28,11 @@ class UserTypesController < ApplicationController
 
     respond_to do |format|
       if @user_type.save
-        format.html { redirect_to user_types_path, notice: 'User type was successfully created.' }
-        format.json { render :show, status: :created, location: user_types_path }
+        format.html { redirect_to new_user_path, notice: 'User type was successfully created.' }
+        # format.html {}
+
+        format.json { render :show, status: :created, location: new_user_path }
+        format.js{}
       else
         format.html { render :new }
         format.json { render json: @user_type.errors, status: :unprocessable_entity }

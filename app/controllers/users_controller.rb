@@ -24,16 +24,14 @@ class UsersController < ApplicationController
   end
 
   # GET 
-  def new_user_type
+  def new_user_type_modal
     @user_type = UserType.new
 
     respond_to do |format|
       format.html
       format.js
     end
-
   end
-
 
   # GET /users/1/edit
   def edit
