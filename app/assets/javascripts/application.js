@@ -16,3 +16,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+function log_error(message) {
+    console.log(message)
+    // in real life
+    // Rails.logger.reportToNewRelic()
+
+}

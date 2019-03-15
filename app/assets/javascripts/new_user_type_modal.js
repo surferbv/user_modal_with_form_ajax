@@ -2,9 +2,9 @@ $("#modal-window").find(".modal-content").html("<%= j (render 'new_user_type_mod
 $("#modal-window").modal('show');
 
 $('#modal-window').submit(function(e) {
-    <%#I have two listners could be prevent if onclikc is placed on caller  %>
+    // <%#I have two listners could be prevent if onclikc is placed on caller  %>
     e.preventDefault() 
-    <%# alert($('#user_type_type_of').val()); %>
+    // <%# alert($('#user_type_type_of').val()); %>
 
     $.ajax({
         url: '/user_types',        
@@ -17,8 +17,7 @@ $('#modal-window').submit(function(e) {
             $('#modal-window').modal('hide');         
         },
         error: function(jqXHR, textStatus, errorThrown){
-            log_error('Error in user type send request')
-            alert("Error not able to dialog")
+            alert("Error in send request user type modal")
         }  
 
     });
